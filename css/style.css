@@ -1,0 +1,199 @@
+/* Mwananchi Garbage — team house style (Group B)
+   Colours: ground #F6F8F3, deep green #14532D, charcoal #232323, amber #F2A104
+   Typefaces: Poppins for headings, Open Sans for body text */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #F6F8F3;
+  color: #232323;
+  font-family: "Open Sans", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  font-family: "Poppins", "Open Sans", sans-serif;
+  color: #14532D;
+  line-height: 1.2;
+}
+
+header {
+  padding: 1rem;
+  border-bottom: 4px solid #F2A104;
+}
+
+header p {
+  margin: 0;
+  font-family: "Poppins", "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #14532D;
+}
+
+header h1 {
+  margin: 0.25rem 0 0;
+}
+
+nav {
+  background: #14532D;
+}
+
+nav a {
+  color: #F6F8F3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem;
+  max-width: 65ch;
+}
+
+aside {
+  padding: 1rem;
+  background: #ffffff;
+  border-left: 4px solid #F2A104;
+}
+
+aside h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+footer {
+  padding: 1rem;
+  border-top: 4px solid #F2A104;
+  font-size: 0.9rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #232323;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+thead th {
+  background: #14532D;
+  color: #F6F8F3;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+form input, form select, form textarea {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  font: inherit;
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #14532D;
+  color: #F6F8F3;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.service-cards li {
+  flex: 1 1 12rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 4px solid #F2A104;
+}
+
+th, td {
+  white-space: nowrap;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
+  nav {
+    position: static;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
