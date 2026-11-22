@@ -197,3 +197,14 @@ th, td {
     flex-direction: column;
   }
 }
+
+/* The Delete form sits inside a table cell, next to the Edit link. */
+.inline-form {
+  display: inline;
+}
+
+/* A server-side check's message, printed beside its field on the form. */
+.field-error {
+  color: #b3261e;
+  font-weight: 600;
+}
